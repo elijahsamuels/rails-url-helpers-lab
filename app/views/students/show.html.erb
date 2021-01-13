@@ -1,1 +1,15 @@
-<h1><%= @student.to_s %></h1>
+Hello Show
+
+<%# Create a new boolean attribute called active in the students table. (HINT: You might have to search around for the best way to set a (ahem) default value (should default to false).)
+
+A user should be able to go to /students/:id/activate to toggle their active attribute between true and false. (This is just the activate route, and not a actual view.)
+ %>
+
+
+<h1>Hello, <%= @student.to_s %></h1>
+
+<% if @student.active %>
+  This student is currently active.
+<% else %>
+  This student is currently inactive.
+<% end %>

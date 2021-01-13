@@ -1,5 +1,11 @@
+Hello index
+
+<%# A user should be able to click the student's name on the index page and be taken to that specific student's show page. %>
+
+
+
 <div>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+    <div><%= link_to student.to_s, student_path(student) %></div>
   <% end %>
 </div>
